@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        header{
+            background-color: rgb(0, 44, 71);
+            position: sticky;
+            width: 100%;
+            top: 0;
+
+        }
+        nav{
+            
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 5px;
+        }
+        nav ul{
+            display: flex;
+            gap: 10px;
+            text-decoration: none;
+            padding: 10px;
+            
+            list-style: none;
+           
+        }
+        nav ul a{
+            text-decoration: none;
+            color: black;
+            margin: 10px;
+         }
+        nav ul a:hover {
+      box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+           }
+        .hero{
+            height: 500px;
+            width: 100%;
+            justify-content: center;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(https://img.freepik.com/premium-photo/shopping-mall-blur-background-with-rgb-glitch_974729-97863.jpg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+         .products{
+            display: grid;
+            gap: 10px;
+            margin: 10px;
+            grid-template-columns: repeat(auto-fit , minmax(250px,1fr));
+        }
+        .products img{
+            border-radius: 5px;
+            height: 200px;
+            width: 200px;
+            margin-top: 8px;
+            
+            
+        }
+        .product-details{
+          box-shadow: rgba(23, 158, 236, 0.256) 0px 54px 55px, rgba(51, 149, 235, 0.12) 0px -12px 30px, rgba(57, 140, 224, 0.854) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+            border-radius: 5px;
+            text-align: center;
+            
+        }
+        /* From Uiverse.io by barisdogansutcu */ 
+button {
+  padding: 10px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  border: 0;
+  background-color: white;
+  box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 15px;
+  transition: all 0.5s ease;
+}
+
+button:hover {
+  letter-spacing: 3px;
+  background-color: hsl(203, 80%, 48%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(24, 161, 220) 0px 7px 29px 0px;
+}
+
+button:active {
+  letter-spacing: 3px;
+  background-color: hsl(201, 80%, 48%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(24, 119, 220) 0px 0px 0px 0px;
+  transform: translateY(10px);
+  transition: 100ms;
+}
+
+ footer{
+      background:#071c2a; color:#d7e7f7;
+      margin-top: var(--space-5);
+      border-top:1px solid rgba(255,255,255,.06);
+    }
+    .footer-grid{
+      display:grid; gap:var(--space-4);
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      padding-block: var(--space-5);
+    }
+    .footer-col h4{
+      color:#fff; margin-bottom:var(--space-3); font-size:1rem;
+      letter-spacing:.3px;
+    }
+    .footer-col p, .footer-col a, .footer-col li{
+      color:#cfe5ff; font-size:.95rem;
+    }
+    .footer-col ul{list-style:none; display:grid; gap:6px;}
+    .footer-col a{text-decoration:none;}
+    .footer-col a:hover{ text-decoration:underline;}
+    .socials{ display:flex; gap:12px; margin-top:10px;}
+    .socials a{
+      display:inline-flex; width:36px; height:36px; align-items:center; justify-content:center;
+      border-radius:50%; background:rgba(255,255,255,.08);
+      color:#e9f4ff; transition:.2s ease;
+    }
+    .socials a:hover{ background:#1a78d0; color:#fff;}
+
+    .footer-bottom{
+      border-top:1px solid rgba(255,255,255,.08);
+      padding-block:14px; color:#b8d3ee; font-size:.9rem; text-align:center;
+    }
+
+    </style>
+</head>
+<body>
+  <header>
+    <nav>
+
+        <h1><i class="fa-solid fa-shop"></i>Shop</h1>
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Contact</a></li>
+            <li><a href="">Shop</a></li>
+            <li><a href="">Cart</a></li>
+        </ul>
+    </nav>
+  </header>
+    <div class="hero">
+        <h2>Welcome to my shop</h2>
+    </div>
+    <div class="products">
+        <div class="product-details">
+            <img src="https://gtcomputers.bg/up/image/shop/products/7/8/6/7/apple-iphone-air-256gb-cloud-white-mg2m4zd-a-000obj1027687.jpeg" alt="">
+            <h2>Product</h2>
+            <p>price : $20</p>
+            <button>add to cart</button>
+    
+        </div>
+
+        <div class="product-details">
+            <img src="https://gtcomputers.bg/up/image/shop/products/7/8/6/7/apple-iphone-air-256gb-cloud-white-mg2m4zd-a-000obj1027687.jpeg" alt="">
+            <h2>Product</h2>
+            <p>price : $20</p>
+            <button>add to cart</button>
+    
+        </div>
+    
+        <div class="product-details">
+            <img src="https://gtcomputers.bg/up/image/shop/products/7/8/6/7/apple-iphone-air-256gb-cloud-white-mg2m4zd-a-000obj1027687.jpeg" alt="">
+            <h2>Product</h2>
+            <p>price : $20</p>
+            <button>add to cart</button>
+    
+        </div>
+    
+        <div class="product-details">
+            <img src="https://gtcomputers.bg/up/image/shop/products/7/8/6/7/apple-iphone-air-256gb-cloud-white-mg2m4zd-a-000obj1027687.jpeg" alt="">
+            <h2>Product</h2>
+            <p>price : $20</p>
+            <button>add to cart</button>
+    
+        </div>
+    
+        <div class="product-details">
+            <img src="https://gtcomputers.bg/up/image/shop/products/7/8/6/7/apple-iphone-air-256gb-cloud-white-mg2m4zd-a-000obj1027687.jpeg" alt="">
+            <h2>Product</h2>
+            <p>price : $20</p>
+            <button>add to cart</button>
+    
+        </div>
+    
+        <div class="product-details">
+            <img src="https://gtcomputers.bg/up/image/shop/products/7/8/6/7/apple-iphone-air-256gb-cloud-white-mg2m4zd-a-000obj1027687.jpeg" alt="">
+            <h2>Product</h2>
+            <p>price : $20</p>
+            <button>add to cart</button>
+    
+        </div>
+    
+        
+</div>
+
+         <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4><i class="fa-solid fa-shop"></i> Shop</h4>
+          <p>Quality products with fast delivery and friendly support. We’re here to make your shopping smooth and simple.</p>
+          <div class="socials" aria-label="Social links">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="Twitter / X"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#">Shipping & Returns</a></li>
+            <li><a href="#">Payment Options</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Track Order</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><i class="fa-regular fa-envelope"></i> support@shop.com</li>
+            <li><i class="fa-solid fa-phone"></i> +1 (555) 000-1234</li>
+            <li><i class="fa-solid fa-location-dot"></i> 123 Market St, City</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        © <span id="year"></span> Shop. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>

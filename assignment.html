@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clothing Store — Snow</title>
+  <link rel="stylesheet" href="assignment style.css" />
+</head>
+<body>
+  <!-- ===== Header ===== -->
+  <header class="snow1">
+    <div class="snow2">
+      <a href="#" aria-label="Home" class="snow2a">SNOW</a>
+
+      <nav class="snow3" aria-label="Main navigation">
+        <ul class="snow3a">
+          <li><a href="#shirts" data-active="true">Shirts</a></li>
+          <li><a href="#dresses">Dresses</a></li>
+          <li class="snow4">
+            <a href="#jeans" aria-haspopup="true" aria-expanded="false">Jeans ▾</a>
+            <ul class="snow4a" aria-label="Jeans submenu">
+              <li><a href="#skinny">Skinny</a></li>
+              <li><a href="#relaxed">Relaxed</a></li>
+              <li><a href="#bootcut">Bootcut</a></li>
+              <li><a href="#straight">Straight</a></li>
+            </ul>
+          </li>
+          <li><a href="#jackets">Jackets</a></li>
+          <li><a href="#shoes">Shoes</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="snow5">
+        <button class="snow5a" aria-label="Search">🔍</button>
+        <button class="snow5a" aria-label="Cart">🛒</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== Hero ===== -->
+  <section class="snow6" role="banner">
+    <div class="snow6a">
+      <p class="snow6b">New arrivals</p>
+      <h1 class="snow6c">Collection 2016</h1>
+      <a href="#products" class="snow19">Shop Now</a>
+    </div>
+  </section>
+
+  <!-- ===== Layout (Sidebar + Content) ===== -->
+  <main class="snow7" id="products">
+    <!-- Sidebar -->
+    <aside class="snow8" aria-label="Categories">
+      <h2 class="snow8a">Categories</h2>
+      <nav class="snow8b">
+        <ul class="snow8c">
+          <li><a href="#shirts">Shirts</a></li>
+          <li><a href="#dresses">Dresses</a></li>
+          <li class="snow8d">
+            <a href="#jeans">Jeans ▸</a>
+            <ul class="snow8e">
+              <li><a href="#skinny">Skinny</a></li>
+              <li><a href="#relaxed">Relaxed</a></li>
+              <li><a href="#bootcut">Bootcut</a></li>
+              <li><a href="#straight">Straight</a></li>
+            </ul>
+          </li>
+          <li><a href="#jackets">Jackets</a></li>
+          <li><a href="#gymwear">Gymwear</a></li>
+          <li><a href="#blazers">Blazers</a></li>
+          <li><a href="#shoes">Shoes</a></li>
+        </ul>
+      </nav>
+
+      <div class="snow8f">
+        <a href="#contact">Contact</a>
+        <a href="#newsletter">Newsletter</a>
+        <a href="#subscribe">Subscribe</a>
+      </div>
+    </aside>
+
+    <!-- Product Grid -->
+    <section class="snow9" aria-label="Products">
+      <!-- Card 1 -->
+      <article class="snow10">
+        <div class="snow11">New</div>
+        <img src="https://picsum.photos/id/1074/600/800" alt="Ripped Skinny Jeans" />
+        <h3>Ripped Skinny Jeans</h3>
+        <p class="snow10a">$24.99</p>
+        <button class="snow19">Add to cart</button>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="snow10">
+        <div class="snow11">Sale</div>
+        <img src="https://picsum.photos/id/1005/600/800" alt="Classic White Shirt" />
+        <h3>Classic White Shirt</h3>
+        <p class="snow10a">$14.99</p>
+        <button class="snow19">Add to cart</button>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="snow10">
+        <img src="https://picsum.photos/id/1000/600/800" alt="Relaxed Fit Jeans" />
+        <h3>Relaxed Fit Jeans</h3>
+        <p class="snow10a">$21.50</p>
+        <button class="snow19">Add to cart</button>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="snow10">
+        <img src="https://picsum.photos/id/1011/600/800" alt="Summer Dress" />
+        <h3>Summer Dress</h3>
+        <p class="snow10a">$29.90</p>
+        <button class="snow19">Add to cart</button>
+      </article>
+
+      <!-- Card 5 -->
+      <article class="snow10">
+        <img src="https://picsum.photos/id/1019/600/800" alt="Denim Jacket" />
+        <h3>Denim Jacket</h3>
+        <p class="snow10a">$39.00</p>
+        <button class="snow19">Add to cart</button>
+      </article>
+
+      <!-- Card 6 -->
+      <article class="snow10">
+        <div class="snow11">New</div>
+        <img src="https://picsum.photos/id/1027/600/800" alt="Bootcut Jeans" />
+        <h3>Bootcut Jeans</h3>
+        <p class="snow10a">$26.99</p>
+        <button class="snow19">Add to cart</button>
+      </article>
+
+      <!-- Card 7 -->
+      <article class="snow10">
+        <img src="https://picsum.photos/id/1031/600/800" alt="Straight Jeans" />
+        <h3>Straight Jeans</h3>
+        <p class="snow10a">$22.50</p>
+        <button class="snow19">Add to cart</button>
+      </article>
+
+      <!-- Card 8 -->
+      <article class="snow10">
+        <div class="snow11">Sale</div>
+        <img src="https://picsum.photos/id/1059/600/800" alt="Gymwear Set" />
+        <h3>Gymwear Set</h3>
+        <p class="snow10a">$18.75</p>
+        <button class="snow19">Add to cart</button>
+      </article>
+    </section>
+  </main>
+
+  <!-- ===== Subscribe ===== -->
+  <section class="snow12" id="subscribe" aria-label="Subscribe">
+    <div class="snow12a">
+      <h2>Subscribe</h2>
+      <p>To get special offers and VIP treatment</p>
+      <form class="snow12b" action="#" method="post">
+        <label class="snow12c" for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="you@example.com" required />
+        <button class="snow19" type="submit">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="snow13" id="contact">
+    <div class="snow14">
+      <!-- Contact Form -->
+      <section class="snow15" aria-label="Contact form">
+        <h3>Contact</h3>
+        <form action="#" method="post">
+          <div class="snow15a">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="Your name" required />
+          </div>
+          <div class="snow15a">
+            <label for="email2">Email</label>
+            <input id="email2" name="email" type="email" placeholder="you@example.com" required />
+          </div>
+          <div class="snow15a">
+            <label for="subject">Subject</label>
+            <input id="subject" name="subject" type="text" placeholder="Subject" />
+          </div>
+          <div class="snow15a">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" placeholder="Write your message..."></textarea>
+          </div>
+          <button class="snow19" type="submit">Send</button>
+        </form>
+      </section>
+
+      <!-- About / Links -->
+      <section class="snow16" aria-label="About links">
+        <h3>About</h3>
+        <ul class="snow16a">
+          <li><a href="#">About us</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#">Store</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+      </section>
+
+      <!-- Store / Payments / Social -->
+      <section class="snow17" aria-label="Store info">
+        <h3>Store</h3>
+        <ul class="snow17a">
+          <li>Payment Methods: VISA · MasterCard · Credit Card</li>
+          <li class="snow18" aria-label="Social">
+            <a href="#" aria-label="Facebook">Facebook</a> ·
+            <a href="#" aria-label="Twitter">Twitter</a> ·
+            <a href="#" aria-label="LinkedIn">LinkedIn</a>
+          </li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="snow13a">© <span id="y"></span> Snow Clothing</div>
+  </footer>
+
+  <script>
+    // small touch: current year
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // a11y hint: toggle aria-expanded on Jeans hover/focus (CSS handles visibility)
+    const jeans = document.querySelector('.snow4 > a');
+    const submenu = document.querySelector('.snow4a');
+    if (jeans && submenu) {
+      jeans.addEventListener('focus', () => jeans.setAttribute('aria-expanded', 'true'));
+      jeans.addEventListener('blur', () => jeans.setAttribute('aria-expanded', 'false'));
+      submenu.addEventListener('mouseenter', () => jeans.setAttribute('aria-expanded', 'true'));
+      submenu.addEventListener('mouseleave', () => jeans.setAttribute('aria-expanded', 'false'));
+    }
+  </script>
+</body>
+</html>

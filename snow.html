@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Snow</title>
+  <link rel="stylesheet" href="snow.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="row res">
+    <div class="fb-form res">
+      <div class="card">
+        <h1>Snow</h1>
+        <p>Contact Us</p>
+      </div>
+      <form action="/submit-form" method="POST">
+        <input type="text" name="name" placeholder="Enter your name" required>
+        <input type="email" name="email" placeholder="Enter your email" required>
+        <input type="password" name="password" placeholder="Enter your password" required>
+
+        <label>Gender:</label>
+        <div>
+          <input type="radio" id="male" name="gender" value="male">
+          <label for="male">Male</label>
+          <input type="radio" id="female" name="gender" value="female">
+          <label for="female">Female</label>
+        </div>
+
+        <label>
+          <input type="checkbox" name="subscribe" value="yes">
+          Subscribe to our newsletter
+        </label>
+
+        <div class="fb-submit">
+          <button type="submit" class="login">Submit</button>
+          <a href="#" class="forgot">Forgot password?</a>
+        </div>
+
+        <hr>
+
+        <div class="button">
+          <a href="#">Create new account</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-langs">
+      <ol>
+        <li><a href="#">English</a></li>
+        <li><a href="#">العربية</a></li>
+        <li><button>+</button></li>
+      </ol>
+      <ol>
+        <li><a href="#">Help</a></li>
+        <li><a href="#">Privacy</a></li>
+        <li><a href="#">Terms</a></li>
+      </ol>
+      <small>Snow © 2025</small>
+    </div>
+  </footer>
+</body>
+</html>

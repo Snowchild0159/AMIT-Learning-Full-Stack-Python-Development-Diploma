@@ -1,0 +1,158 @@
+
+:root{
+  --bg:#ffffff;
+  --text:#111111;
+  --muted:#6b7280;
+  --line:#e5e7eb;
+  --accent:#111111;          
+  --accent-2:#000000;        
+  --card:#f8fafc;
+}
+
+*{ box-sizing: border-box; }
+html,body{ height:100%; }
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji','Segoe UI Emoji', 'Segoe UI Symbol';
+  color:var(--text);
+  background:var(--bg);
+  line-height:1.5;
+}
+
+
+.snow1{
+  position: sticky; top:0; z-index:50;
+  background:#fff; border-bottom:1px solid var(--line);
+}
+.snow2{
+  max-width:1200px; margin-inline:auto;
+  display:flex; align-items:center; justify-content:space-between;
+  gap:16px; padding:12px 16px;
+}
+.snow2a{
+  font-weight:700; letter-spacing:.8px; text-decoration:none; color:var(--text);
+  font-size:1.1rem; border:2px solid var(--text); padding:4px 8px;
+}
+
+.snow3a{ list-style:none; display:flex; gap:18px; padding:0; margin:0; }
+.snow3a a{
+  text-decoration:none; color:var(--text); padding:8px 6px; display:block;
+  border-bottom:2px solid transparent;
+}
+.snow3a a:hover{ border-bottom-color:var(--text); }
+.snow3a a[data-active="true"]{ border-bottom-color:var(--text); }
+
+.snow5{ display:flex; gap:8px; }
+.snow5a{
+  border:1px solid var(--line); background:#fff; padding:8px 10px; border-radius:6px; cursor:pointer;
+}
+.snow5a:hover{ background:#f3f4f6; }
+
+.snow4{ position:relative; }
+.snow4a{
+  position:absolute; left:0; top:100%;
+  display:none; min-width:180px; background:#fff; border:1px solid var(--line); border-radius:6px;
+  padding:6px; box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+.snow4:hover .snow4a{ display:block; }
+.snow4a li{ list-style:none; }
+.snow4a a{ padding:8px 10px; border-radius:4px; }
+.snow4a a:hover{ background:#f3f4f6; }
+
+.snow6{
+  background-image: url('https://images.unsplash.com/photo-1520975693410-001d8e3f3a0b?q=80&w=1400&auto=format&fit=crop');
+  background-size: cover; background-position: center;
+  min-height: 54vh; display:grid; place-items:center;
+  position:relative; isolation:isolate;
+}
+.snow6::after{
+  content:""; position:absolute; inset:0; background:linear-gradient(180deg, rgba(0,0,0,.45), rgba(0,0,0,.25));
+  z-index:0;
+}
+.snow6a{ position:relative; z-index:1; text-align:center; color:#fff; }
+.snow6b{ text-transform:uppercase; letter-spacing:3px; opacity:.9; }
+.snow6c{ font-size: clamp(1.8rem, 4vw, 3rem); margin:.3rem 0 1rem; }
+
+.snow19{
+  display:inline-block; background:var(--text); color:#fff; text-decoration:none;
+  padding:10px 18px; border-radius:999px; border:1px solid var(--text);
+  transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+}
+.snow19:hover{ transform: translateY(-1px); box-shadow:0 10px 22px rgba(0,0,0,.12); }
+.snow19:active{ transform: translateY(0); box-shadow:none; }
+
+.snow7{
+  max-width:1200px; margin:28px auto; padding:0 16px;
+  display:grid; grid-template-columns: 250px 1fr; gap:22px;
+}
+.snow8{ border:1px solid var(--line); border-radius:10px; padding:14px; background:#fff; align-self:start; position:sticky; top:78px; }
+.snow8a{ font-size:1.1rem; margin: 4px 0 10px; }
+.snow8c{ list-style:none; padding:0; margin:0; display:grid; gap:6px; }
+.snow8c a{ text-decoration:none; color:var(--text); padding:8px 10px; border-radius:6px; display:block; }
+.snow8c a:hover{ background:#f3f4f6; }
+.snow8d > a{ display:flex; justify-content:space-between; align-items:center; }
+.snow8e{ list-style:none; padding-left:14px; display:grid; gap:6px; margin:6px 0 0; }
+.snow8f{ border-top:1px dashed var(--line); margin-top:12px; padding-top:12px; display:grid; gap:8px; }
+.snow8f a{ color:var(--muted); text-decoration:none; }
+.snow8f a:hover{ text-decoration:underline; }
+
+.snow9{
+  display:grid; gap:16px;
+  grid-template-columns: repeat( auto-fit, minmax(180px, 1fr) );
+}
+.snow10{
+  background:#fff; border:1px solid var(--line); border-radius:12px; padding:10px; position:relative;
+  display:flex; flex-direction:column; gap:8px; overflow:hidden;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.snow10:hover{ transform: translateY(-2px); box-shadow:0 16px 30px rgba(0,0,0,.08); }
+.snow10 img{ width:100%; height:220px; object-fit:cover; border-radius:8px; }
+.snow10 h3{ font-size:1rem; margin:.25rem 0 0; }
+.snow10a{ color:var(--muted); margin:0 0 .25rem; }
+.snow11{
+  position:absolute; top:10px; left:10px; background:#111; color:#fff; font-size:.75rem; padding:4px 8px; border-radius:999px;
+}
+
+.snow12{ background: var(--accent-2); color:#fff; padding: 40px 16px; margin-top: 36px; }
+.snow12a{ max-width:900px; margin:0 auto; text-align:center; }
+.snow12a h2{ margin:0 0 8px; }
+.snow12b{ display:flex; gap:8px; justify-content:center; margin-top:12px; flex-wrap:wrap; }
+.snow12c{ position:absolute; left:-9999px; } /* hide label but keep for a11y */
+.snow12 input{
+  padding:10px 12px; border-radius:999px; border:1px solid #333; background:#111; color:#fff; min-width:260px;
+}
+.snow12 input::placeholder{ color:#c8c8c8; }
+
+.snow13{ background:#0b0b0b; color:#e5e7eb; margin-top: 36px; }
+.snow14{
+  max-width:1200px; margin:0 auto; padding: 26px 16px;
+  display:grid; gap:24px; grid-template-columns: repeat(3, 1fr);
+}
+.snow15 h3, .snow16 h3, .snow17 h3{ margin-top:0; color:#fff; }
+.snow15a{ display:grid; gap:6px; margin-bottom:10px; }
+.snow15 input, .snow15 textarea{
+  width:100%; padding:10px 12px; border-radius:8px; border:1px solid #2e2e2e; background:#111; color:#fff;
+}
+
+.snow16a{ list-style:none; padding:0; margin:0; display:grid; gap:8px; }
+.snow16a a{ color:#cfd8e3; text-decoration:none; }
+.snow16a a:hover{ text-decoration:underline; }
+
+.snow17a{ list-style:none; padding:0; margin:0; display:grid; gap:8px; }
+.snow18 a{ color:#cfd8e3; text-decoration:none; }
+.snow18 a:hover{ text-decoration:underline; }
+
+.snow13a{
+  border-top:1px solid #1a1a1a; text-align:center; padding:12px; color:#b6bcc6;
+}
+
+@media (max-width: 920px){
+  .snow7{ grid-template-columns: 1fr; }
+  .snow8{ position:static; }
+}
+
+@media (max-width: 720px){
+  .snow3a{ gap:10px; }
+  .snow6{ min-height: 44vh; }
+  .snow14{ grid-template-columns: 1fr; }
+}

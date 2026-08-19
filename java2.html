@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        .loading{
+            width : 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 2px solid black;
+            border-top: none;
+            animation: spin infinite 1s linear;
+            }
+
+            @keyframes spin {
+                0%{
+                 transform: rotate(0deg);   
+                }
+                100%{
+                  transform: rotate(720deg);
+                }
+            }
+    </style>
+</head>
+<body>
+    <ul class="hello"></ul>
+    <p class="loading"></p>
+    <script>
+        const ul = document.querySelector(".hello")
+        const p = document.querySelector("p")
+
+   //     fetch("https://jsonplaceholder.typicode.com/posts" , {
+   //         method : "GET"
+  //     }).then((response)=>{
+   //             return response.json()
+    //    }).then((data) => {
+   //         data.forEach(item =>{
+   //             ul.innerHTML += `<li> ${item.title} </li>`
+    //        }) 
+    //        console.log(data)
+    //        p.classList.remove("loading")
+    //    })
+        
+        async function fetchData(){
+          const response = await fetch("https://jsonplaceholder.typicode.com/posts" , {
+            method : "GET"})
+
+            const data = await response.json()
+
+                    data.forEach((item) => {
+              ul.innerHTML += `<li> ${item.title} </li>`
+       }) 
+       p.classList.remove("loading")
+       console.log(data)
+
+        }
+
+        fetchData()
+    </script>
+</body>
+</html>
