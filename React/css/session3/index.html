@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 3</title>
+
+    <style>
+        .container{
+            background-color: #eeeeee;
+            width: 100%;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .card{
+            width:40%;
+            display: inline-block;
+            margin: 10px 10px;
+            border-radius: 10px;
+            background-color: antiquewhite;
+            padding: 15px ;
+            /* padding-left: 20px; */
+            
+        }
+        .card-image img{
+            width: 100%;
+            border-radius: 10px;
+            transition: transform 1s;
+        }
+        .card-header{
+            text-align: start;
+            font-size: 18px;
+            font-weight: bold;
+            margin: 10px 0px;
+            transition: all 1s;
+        }
+        .card-body{
+            text-align: start;
+            margin: 10px 0px;
+        }
+        .card-image img:hover{
+            transform: scale(1.1) translateY(3px);
+        }
+        .card-header:hover{
+            color: blue;
+            cursor: pointer;
+            cursor:all-scroll;
+            cursor:scroll;
+            cursor:text;
+            cursor:move;
+            cursor:w-resize;
+            cursor:not-allowed;
+            transform: scale(1.1) translateY(-10px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-image">
+                <img src="https://letsenhance.io/static/73136da51c245e80edc6ccfe44888a99/396e9/MainBefore.jpg" alt="">
+            </div>
+
+            <div class="card-header">Lorem ipsum dolor sit amet.</div>
+            <div class="card-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, voluptatum!</div>
+        </div>
+         <div class="card">
+            <div class="card-image">
+                <img src="https://letsenhance.io/static/73136da51c245e80edc6ccfe44888a99/396e9/MainBefore.jpg" alt="">
+            </div>
+
+            <div class="card-header">Lorem ipsum dolor sit amet.</div>
+            <div class="card-body"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, voluptatum!</div>
+        </div>
+    </div>
+
+</body>
+</html>

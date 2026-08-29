@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        for (let i = 1; i <= 20; i++) {
+  console.log(i);
+}
+        
+        let num = 1;
+let sum = 0;
+
+while (num <= 50) {
+  if (num % 2 === 0) {
+    sum = sum + num;
+  }
+  num++;
+}
+
+console.log("Sum of even numbers from 1 to 50 is:", sum);
+
+let i = 1;
+
+do {
+  console.log("5 x " + i + " = " + (5 * i));
+  i++;
+} while (i <= 10);
+
+
+
+function greet(name) {
+  return "Hello, " + name + "!";
+}
+
+let message = greet("Ali");
+console.log(message);
+
+function findMax(a, b, c) {
+  let max = a;
+
+  if (b > max) {
+    max = b;
+  }
+
+  if (c > max) {
+    max = c;
+  }
+
+  return max;
+}
+
+
+console.log(findMax(10, 25, 7)); 
+
+function factorial(n) {
+  let result = 1;
+
+  for (let i = 1; i <= n; i++) {
+    result = result * i;
+  }
+
+  return result;
+}
+
+
+console.log(factorial(5));  
+console.log(factorial(0));  
+
+
+function countVowels(str) {
+  let count = 0;
+  let vowels = "aeiouAEIOU";
+
+  for (let i = 0; i < str.length; i++) {
+    let ch = str[i];
+
+    if (vowels.includes(ch)) {
+      count++;
+    }
+  }
+
+  return count;
+}
+
+console.log(countVowels("Hello World")); 
+
+
+let num1 = Number(prompt("Enter the first number:"));
+let num2 = Number(prompt("Enter the second number:"));
+let operator = prompt("Enter operator (+, -, *, /):");
+
+let result;
+
+switch (operator) {
+  case "+":
+    result = num1 + num2;
+    break;
+
+  case "-":
+    result = num1 - num2;
+    break;
+
+  case "*":
+    result = num1 * num2;
+    break;
+
+  case "/":
+    if (num2 === 0) {
+      result = "Error: Cannot divide by zero!";
+    } else {
+      result = num1 / num2;
+    }
+    break;
+
+  default:
+    result = "Invalid operator!";
+}
+
+console.log("Result:", result);
+
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "todos": [
+    {
+      "id": "0274",
+      "text": "play football",
+      "status": true
+    },
+    {
+      "id": "2c9f",
+      "text": "hello",
+      "status": false
+    },
+    {
+      "id": "32c3",
+      "text": "hamada",
+      "status": false
+    }
+  ]
+}

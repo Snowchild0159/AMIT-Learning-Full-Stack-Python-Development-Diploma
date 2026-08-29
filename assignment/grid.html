@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            background-color: burlywood;
+            height: 900px;
+            /* display: flex; */
+            display: grid;
+
+            grid-template-columns: 100px 100px 100px 100px;
+            grid-template-columns: 25% 25% 25% 25%;
+            /* justify-content: center;
+            justify-content: start;
+            justify-content: end;
+            justify-content: space-around;
+            justify-content: space-between; */
+            grid-template-columns: 20% 20%;
+            grid-template-columns: auto auto auto;
+            /* justify-content: center; */
+            /* grid-template-columns: 2fr 1fr 1fr; */
+            /* grid-template-columns: 100px 100px 100px; */
+            /* grid-template-columns: 200px  repeat(4 , 100px); */
+            grid-template-columns:repeat(auto-fill , minmax(300px , auto));
+            /* grid-template-columns:repeat(auto-fill , 300px); */
+
+
+            grid-template-rows: 100px 100px 100px;
+/* 
+            align-items: end;
+            align-items: start;
+            align-items: stretch;
+            align-items: center;
+            /* align-items: end; */
+            grid-template-rows: repeat(4 , 200px);
+
+            align-content: start;
+            align-content: end;
+            align-content: center;
+
+            align-items: center;
+            align-items: start;
+            align-items: stretch;
+       
+        }
+        .item{
+            font-size: 4em;
+            border: 1px solid black;
+            /* min-width: 100px; */
+            background-color: rgb(147, 147, 200);
+        }
+        
+        .item1 {
+            grid-column-start: 1 ;
+            grid-column-end: 5;
+        }
+        .item2 {
+            grid-column: 1 / span 3;
+            grid-column: 1 / 4;
+            grid-column: 1 / -2;
+        }
+        .item4{
+            grid-row: 3 / -1;
+        }
+        .item5{
+            
+            grid-row: 3 / -1;
+        }
+       
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="item item1">1</div>
+        <div class="item item2">2</div>
+        <div class="item item3">3</div>
+        <div class="item item4">4</div>
+        <div class="item item5">5</div>
+        <div class="item item6">6</div>
+        <div class="item item7">7</div>
+        <div class="item item8">8</div>
+        <div class="item item9">9</div>
+    </div>
+</body>
+</html>

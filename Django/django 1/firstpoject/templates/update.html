@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block content %}
+  
+<form method="post" class="container">
+    <!-- {% if form.errors %}
+    <div class="alert alert-danger">
+        {{form.errors}}
+
+    </div>
+    {% endif %} -->
+    
+    {{form}}
+    <div>
+        <a href="{% url 'home' %}">
+            
+            <button class="btn btn-secondary" type="button">Back</button>
+        </a>
+        <!-- <button class="btn btn-secondary" type="reset">Reset</button> -->
+        <button class="btn btn-primary" type="submit">Update</button>
+    </div>
+</form>
+
+{% endblock content %}

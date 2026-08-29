@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+        .loading{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 2px solid black;
+            border-top: none;
+            animation: spin infinite 1s linear;
+        }
+        @keyframes spin {
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(720deg);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <p class="loading"></p>
+    <ul class="hello"></ul>
+    <img width="100"  alt="hello">
+    <script>
+        const ul = document.querySelector(".hello")
+        const p = document.querySelector("p")
+
+        // p.innerText = "Loading ..."
+
+        // fetch("https://jsonplaceholder.typicode.com/posts" , {
+        //     method : "GET"
+        // }).then((reponse)=>{
+        //   return reponse.json()
+        // }).then((data) => {
+
+        //     data.forEach((item) => {
+        //         ul.innerHTML += `<li> ${item.title} </li>`
+        //     })
+        //     console.log(data)
+
+        //     p.classList.remove("loading")
+        //   })
+
+        async function fetchData() {
+
+            const respone = await fetch("https://jsonplaceholder.typicode.com/posts" , {
+                    method : "GET"
+                })
+            const data = await respone.json() 
+
+            data.forEach((item) => {
+                ul.innerHTML += `<li> ${item.title} </li>`
+            })
+
+            p.classList.remove("loading")
+            console.log(data)
+
+        }
+
+        fetchData()
+
+
+
+
+
+        // const myImage = document.getElementsByTagName("img")[0] 
+
+        // myImage.src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-3NW1PI_OlOzDx2sYUPBceF13BFJAMu0Jgw&s'
+        // console.log("hello")
+
+        // console.log("hello1")
+        // window.setTimeout(()=>{
+        //     console.log("hello2")
+        // } , 1000)
+
+        // console.log("hello 3")
+
+        // for(let i =0 ; i < 10000000000 ; i ++) {
+
+        // }
+        // console.log("hello 1")
+        // const p = new Promise(() => {
+        //     console.log("hello 2 ")
+        // })
+        // console.log(p)
+
+        // console.log("hello 3")
+
+
+
+
+
+        // console.log("hello 4")
+
+        // for(let i = 0 ; i < friends.length ; i++) {
+            //     console.log(friends[i] )
+            // }
+            
+            // for(let i in friends) {
+                
+            //     console.log(friends[i] )
+            // }
+            
+            // friends.forEach((item)=>{
+                //     item *
+                // })
+                
+        // const friends = ["ahmed" , "ali" , "omar"]
+        // // const newFriends = friends.filter((item) => {
+        // //     if(item[0] === 'a') {
+        // //         return true
+        // //     }else{
+        // //         return false
+        // //     }
+        // // })
+        // // console.log(newFriends)
+
+        // const newFriends = friends.map((ele) => ele + " mohsen")
+        // console.log(newFriends)
+        // for(let value of friends) {
+        //         console.log(value)
+
+        // }
+        
+
+    </script>
+</body>
+</html>

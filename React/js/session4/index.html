@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        input{
+            width: 80%;
+            margin: 10px;
+            padding: 5px;
+            padding-left: 10px;
+            border-radius: 10px;
+            outline: none;
+            border: 2px solid black;
+        }
+        .list{
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- <button>
+        <a href="http://www.google.com">Click Me</a>
+    </button> -->
+    <button class="btn">
+        Click Me
+    </button>
+
+
+    <script>
+        // console.log(window.screen.width)
+        // console.log(window.screen.height)
+        // console.log(window.screen.availHeight)
+        // console.log(window.screen.availWidth)
+        // console.log(window.location.href)
+        // console.log(window.location.protocol)
+        // console.log(window.location.hostname)
+        // console.log(window.location.port)
+        // console.log(window.location.pathname)
+
+
+        // console.log(window.history.back())
+        /**
+         * http://127.0.0.1:5500/session4/index.html
+         * 
+         * http:// : protocol  
+         * 127.0.0.1 : IP, domain, hostname
+         * 5500 : port Number 
+         * /session4/index.html : pathname
+         *  */
+
+
+         /**
+          * 
+          * https://teams.microsoft.com:443/v2/?meetingjoin=true#/meet/33748834625292?p=syAaAsDDjd2dKkjPUv&lightExperience=false
+          * protocol : https://
+          * teams.microsoft.com : Hostname, ip , domain
+          * port Number : 443
+          * pathname : /v2/?meetingjoin=true#/meet/33748834625292?p=syAaAsDDjd2dKkjPUv&lightExperience=false
+          * 
+          * */
+        const button = document.querySelector(".btn")
+        button.addEventListener("click" , function() {
+            // window.history.back()
+            // window.history.forward()
+
+            // window.location.reload()
+            // window.location.href = "http://www.google.com"
+            // Browser Object Model 
+            // window.close()
+            // window.open("https://www.google.com" , "_blank" , "width=400,height=400")
+        })
+
+    </script>
+    <!-- 
+    <div>
+        <input class="inp" name="firstName" placeholder="Please, enter your first name" type="text">
+    </div>
+    
+    <ul class="list">
+
+    </ul>
+    <script>
+        const input = document.querySelector(".inp")
+        const ul = document.querySelector(".list")
+        input.addEventListener("keyup", function(e){
+            if(input.value.length <= 3){
+                input.style.borderColor = 'red'
+            }else{
+                input.style.borderColor = 'green'
+
+                if (e.key == 'Enter') {
+                    ul.innerHTML += `<li> ${input.value} </li>`
+                }
+            }
+        }) -->
+    </script>
+
+
+<!--     
+    <p class="text"></p>
+
+    <button class="showmore">Show More </button>
+    <button style="display: none;" class="showless">Show Less</button>
+    
+    <script>
+        let data = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia neque rerum saepe fugiat earum tempora voluptatem tenetur excepturi ad reprehenderit voluptates ut voluptate laudantium deleniti, non esse vitae sequi incidunt eum facilis? In qui voluptate architecto eveniet dolores doloremque facilis blanditiis modi deleniti reiciendis corrupti hic iure soluta laudantium perspiciatis quis voluptatem saepe officia provident, magni quibusdam exercitationem numquam molestias quas? Aspernatur unde iste ut veniam odit eaque eligendi minima doloribus, recusandae, corporis fugiat minus autem molestias nihil voluptatum dolorem incidunt expedita reiciendis alias. Cumque impedit qui, doloribus ut minus officiis maxime illo unde deserunt vel iste velit id incidunt molestiae voluptatibus commodi, culpa consequuntur, reprehenderit reiciendis aliquid aut fuga assumenda? Sint officiis optio amet neque sequi, repudiandae doloremque impedit eaque quidem rerum commodi obcaecati qui adipisci vero maiores voluptatibus quia ab voluptatem corporis ratione sapiente. Quam quae ab veniam quos? Est sit quisquam illum quod porro inventore excepturi error vitae iusto, itaque nemo, autem odio tempore at illo perferendis soluta quia aliquam. Et nostrum, autem vel dolorum accusantium eius. Inventore temporibus quisquam eligendi, aut nemo reiciendis consectetur aliquam illum, sapiente repellat voluptatem voluptas minima esse? Possimus esse quod quae mollitia eligendi. Doloremque, omnis beatae, ipsum laudantium earum mollitia voluptates error veniam nihil illo nemo maxime numquam vel iusto nulla exercitationem excepturi sed enim sapiente. Deleniti sequi a veritatis et in. Maiores dolorum iusto ab magni? Inventore, enim sapiente, deleniti aliquam, aspernatur perspiciatis dolorem sint odio adipisci nostrum ad ipsam non animi quasi error voluptatum ut necessitatibus praesentium quo ipsa. Soluta accusamus inventore, earum, explicabo omnis recusandae delectus laboriosam saepe, amet natus iste distinctio officiis exercitationem? Provident ad explicabo beatae dolores laudantium error mollitia quis veritatis ipsum deserunt amet quia adipisci, possimus, dolore blanditiis animi? Delectus tempore asperiores, voluptatibus magni explicabo molestias minima vel ea accusantium porro id natus incidunt!'    
+        const p = document.querySelector(".text") 
+
+        p.innerText = data.slice(0 , 50) + ' ...'
+        const showBtn = document.querySelector('.showmore')
+        const hidebtn = document.querySelector(".showless")
+        showBtn.addEventListener("click" , function(){
+            p.innerText = data
+            showBtn.style.display = 'none'
+            hidebtn.style.display = 'inline'
+        })
+        hidebtn.addEventListener("click" , function () {
+            p.innerText = data.slice(0 , 50) + ' ...'
+            hidebtn.style.display = 'none'
+            showBtn.style.display = 'inline'
+        })
+
+        
+    </script> -->
+</body>
+</html>

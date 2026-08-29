@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS- session 2</title>
+</head>
+<body>
+    <script>
+
+        // let num1 = Number(prompt("Please,enter the first number : "))
+        // let num2 = Number(prompt("Please,enter the second number : "))
+        // let num3 = Number(prompt("Please,enter the third number : "))
+        
+        // if (num1 >= num2 && num1 >= num3){
+        //     console.log("the largest number is ", num1)
+        // }else if(num2 >= num3){
+        //     console.log("the largest number is ", num2)
+            
+        // }else {
+        //     console.log("the largest number is ", num3)
+        // }
+        // data structures 
+         
+        // let x = 10 
+        // console.log(typeof x)
+
+        /**
+         * 
+         * number
+         * string
+         * boolean 
+         * undefined 
+         * 
+         * object 
+         * */
+
+
+        //  let name = 'abdo'
+        //  let age = 25 
+        //  let address_city = 'cairo'
+        //  let address_state = 'egypt'
+        //  let friend_0 = 'omar'
+        //  let friend_1 = 'hany'
+        //  let friend_2 = 'alaa'
+
+
+        // let info = {
+        //     name  : "ahmed" ,
+        //     age : 25 , 
+        //     address : {
+        //         city : "cairo"  , 
+        //         state : "egypt"
+        //     } , 
+        //     hasDriveingLicence : true 
+        // }
+        // bracket notation 
+        // dot notation 
+
+        // console.log(info.name)
+        // console.log(info.age)
+        // console.log(info.address.city)
+        // console.log(info.address.state)
+        // console.log(info.hasDriveingLicence)
+        // bracket notation
+        // console.log(info["name"])
+        // console.log(info["age"])
+        // console.log(info["address"]["city"])
+        // console.log(info["address"].state)
+        // console.log(info["hasDriveingLicence"])
+
+        // info.name = "hassan"
+        // info.birthyear = 2015
+
+        // delete info.birthyear
+        // console.log(info.firstName)
+        // console.log(info)
+
+
+        // let friends = ["ahmed" , "ali" , 'sameh' , 'hossam']
+        // console.log(friends)
+        // console.log(friends[0])
+        // console.log(friends[1])
+        // console.log(friends[2])
+        // console.log(friends[3])
+        // friends[0] = 'hamada'
+        // console.log(friends)
+
+        // let firstName = 'Ahmed hossam omar'
+        // console.log(firstName.toLowerCase())
+        // console.log(firstName.toUpperCase())
+        // console.log(firstName.indexOf("a"))
+        // console.log(firstName.indexOf("hossam"))
+        // console.log(firstName.includes("hossam"))
+        // console.log(firstName.includes("omar"))
+        // console.log(firstName.split(" "))
+        // console.log(firstName.split("a"))
+ 
+        // console.log(friends[1000000])
+
+ 
+        // let name1 = prompt("Please,enter the name 1 : ") //name1 : ahmed alaa
+        // let name2 = prompt("Please,enter the name 2 : ") //name2 : omar magdy
+   
+        // let name1AsArray  = name1.split(" ") // ['ahmed', 'alaa']
+        // let name2AsArray  = name2.split(" ") // ['omar', 'magdy']
+
+        // let fatherName1 = name1AsArray[1].toLowerCase()  // 'alaa'
+        // let fatherName2 = name2AsArray[1].toLowerCase()  // 'magdy'
+
+        // if (fatherName1 === fatherName2) {
+        //     console.log("may by brotheres ")
+        // }else{
+        //     console.log("can't be brothers")
+        // }
+
+        // name1.split(" ") // ['ahmed', 'alaa']
+        // name1.split(" ")[1] // 'alaa'
+        // name2.split(" ")[1] // 'magdy'
+
+
+
+        // let firstNam/e = "Ahmed Alaa elsayed othman  "
+        // firstName[0] = 'a'
+        // // firstName = firstName.toLowerCase()
+        // console.log(firstName)
+        // console.log(firstName.toLowerCase().trim().toUpperCase())
+        // console.log(firstName.endsWith("othman"))
+        // console.log(firstName.startsWith("ahmed"))
+        // console.log(firstName.includes("alaa"))
+        // console.log(firstName.indexOf("a"))
+        // console.log(firstName.lastIndexOf("a"))
+        // console.log("welcome " + firstName )
+        // console.log(firstName.replace("a" , 'b') )
+        // console.log(firstName.padEnd(50 , "*"))
+        // console.log(firstName.padStart(50 , "*"))
+        // console.log(firstName.trim())
+
+
+        // console.log(firstName.replace("a" , "b"))
+        // console.log(firstName.length)
+        // let names = ["ahmed" , "ali" , "mohamed" , "sayed"]
+        // names[0][0] = "h"
+        // console.log(names.includes("ali"))
+        // console.log(names.includes("Ali"))
+        // console.log(names.includes("mohsen"))
+        // console.log(names.length)
+        // names.push("mohsen")
+        // names.unshift("walaa")
+        // names.splice(2 , 0 , "omar")
+        // names[0] = "hh"
+        // names.pop()
+        // names.shift()
+        // names.splice(1,1)
+        // names.splice(0,1)
+        // names.splice(0,1)
+        // console.log(names.indexOf("sameh"))
+
+
+        // number of iterations 
+        // for loop statement
+
+        // for (let i = 0 ; i < 10 ; i++) {
+        //     console.log("hello world")
+        
+        // }    
+        // let i = 0 ;
+        // while(i < 10){
+        //     console.log("hello world")
+        //     i++
+        // }
+        let rigthPassword = '12345'
+        let userPassword  
+
+        // while (userPassword !== rigthPassword){
+        //     userPassword = prompt("please, enter your password")
+        // }
+        // while (true){
+        //     userPassword = prompt("please, enter your password")
+        //     if (rigthPassword == userPassword) { 
+        //         console.log("Welcome to your system")
+        //         break 
+
+        //     }
+        //     console.log("wrong password")
+        // }
+        
+       
+   </script>
+</body>
+</html>

@@ -1,0 +1,212 @@
+proxy_cache_path /var/cache/ea-nginx/proxy/goby levels=1:2 keys_zone=goby:10m inactive=60m;
+
+#### main domain for goby ##
+server {
+    server_name goby2.com www.goby2.com mail.goby2.com goby2.com.160-153-174-255.cpanel.site www.goby2.com.160-153-174-255.cpanel.site mail.goby2.com.160-153-174-255.cpanel.site 160.153.174.255;
+    listen 80;
+    listen [::]:80;
+
+    include conf.d/includes-optional/cloudflare.conf;
+
+    set $CPANEL_APACHE_PROXY_PASS $scheme://apache_backend_${scheme}_160_153_174_255;
+
+    # For includes:
+    set $CPANEL_APACHE_PROXY_IP 160.153.174.255;
+    set $CPANEL_APACHE_PROXY_SSL_IP 160.153.174.255;
+    set $CPANEL_SERVICE_SUBDOMAIN 0;
+
+    set $CPANEL_PROXY_CACHE goby;
+    set $CPANEL_SKIP_PROXY_CACHING 0;
+
+    listen 443 ssl;
+    listen [::]:443 ssl;
+
+    http2 off;
+
+    ssl_certificate /var/cpanel/ssl/apache_tls/goby2.com/combined;
+    ssl_certificate_key /var/cpanel/ssl/apache_tls/goby2.com/combined;
+
+    ssl_protocols TLSv1.2 TLSv1.3;
+    proxy_ssl_protocols TLSv1.2 TLSv1.3;
+    ssl_prefer_server_ciphers on;
+    ssl_ciphers ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:DHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES256-GCM-SHA384:TLS_AES_256_GCM_SHA384:TLS_CHACHA20_POLY1305_SHA256:TLS_AES_128_GCM_SHA256;
+    proxy_ssl_ciphers ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:DHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES256-GCM-SHA384:TLS_AES_256_GCM_SHA384:TLS_CHACHA20_POLY1305_SHA256:TLS_AES_128_GCM_SHA256;
+
+    root "/home/goby/public_html";
+
+    location /cpanelwebcall {
+        include conf.d/includes-optional/cpanel-proxy.conf;
+        proxy_pass http://127.0.0.1:2082/cpanelwebcall;
+    }
+
+    location /Microsoft-Server-ActiveSync {
+        include conf.d/includes-optional/cpanel-proxy.conf;
+        proxy_pass http://127.0.0.1:2090/Microsoft-Server-ActiveSync;
+    }
+
+    location = /favicon.ico {
+        allow all;
+        log_not_found off;
+        access_log off;
+        include conf.d/includes-optional/cpanel-proxy.conf;
+        proxy_pass $CPANEL_APACHE_PROXY_PASS;
+    }
+
+    location = /robots.txt {
+        allow all;
+        log_not_found off;
+        access_log off;
+        include conf.d/includes-optional/cpanel-proxy.conf;
+        proxy_pass $CPANEL_APACHE_PROXY_PASS;
+    }
+
+    location / {
+        # Force HTTPS for service subdomains
+        if ($scheme = http) {
+            return 301 https://$host$request_uri;
+        }
+
+        # Disable caching
+        proxy_no_cache      1;
+        proxy_cache_bypass  1;
+
+        # Pass to Apache (or upstream app server)
+        proxy_pass                          http://0.0.0.0:8000;
+        proxy_set_header  Host              $host;
+        proxy_set_header  X-Real-IP         $remote_addr;
+        proxy_set_header  X-Forwarded-For   $proxy_add_x_forwarded_for;
+        proxy_set_header  X-Forwarded-Proto $scheme;
+    }
+
+    location /static/ {
+        alias /home/goby/from_git/v1/goby/staticfiles/;
+        expires 30d;
+        access_log off;
+        add_header Cache-Control "public";
+        try_files $uri =404;
+    }
+
+    # Media files configuration
+    location /media/ {
+        alias /home/goby/from_git/v1/goby/media/;
+        expires 30d;
+        access_log off;
+        add_header Cache-Control "public";
+        try_files $uri =404;
+    }
+    # WebSocket configuration
+    location /ws/ {
+        proxy_pass http://0.0.0.0:8000;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_read_timeout 86400;
+    }
+
+
+    include conf.d/server-includes/*.conf;
+    include conf.d/users/goby/*.conf;
+    include conf.d/users/goby/goby2.com/*.conf;
+}
+server {
+    listen 80;
+    listen [::]:80;
+
+    listen 443 ssl;
+    listen [::]:443 ssl;
+
+    http2 off;
+
+    ssl_certificate /var/cpanel/ssl/apache_tls/goby2.com/combined;
+    ssl_certificate_key /var/cpanel/ssl/apache_tls/goby2.com/combined;
+
+    server_name  autodiscover.goby2.com cpanel.goby2.com cpcalendars.goby2.com cpcontacts.goby2.com webdisk.goby2.com webmail.goby2.com;
+
+    include conf.d/includes-optional/cloudflare.conf;
+
+    set $CPANEL_APACHE_PROXY_PASS $scheme://apache_backend_${scheme}_160_153_174_255;
+
+    # For includes:
+    set $CPANEL_APACHE_PROXY_IP 160.153.174.255;
+    set $CPANEL_APACHE_PROXY_SSL_IP 160.153.174.255;
+    set $CPANEL_SERVICE_SUBDOMAIN 1;
+
+    location /.well-known/cpanel-dcv {
+        root "/home/goby/public_html";
+        disable_symlinks if_not_owner;
+
+        # pass to Apache
+        include conf.d/includes-optional/cpanel-proxy.conf;
+        proxy_pass $CPANEL_APACHE_PROXY_PASS;
+    }
+
+    location /.well-known/pki-validation {
+        root "/home/goby/public_html";
+        disable_symlinks if_not_owner;
+
+        # pass to Apache
+        include conf.d/includes-optional/cpanel-proxy.conf;
+        proxy_pass $CPANEL_APACHE_PROXY_PASS;
+    }
+
+    location /.well-known/acme-challenge {
+        root "/home/goby/public_html";
+        disable_symlinks if_not_owner;
+
+        # pass to Apache
+        include conf.d/includes-optional/cpanel-proxy.conf;
+        proxy_pass $CPANEL_APACHE_PROXY_PASS;
+    }
+
+    location / {
+        # Force HTTPS for service subdomains
+        if ($scheme = http) {
+            return 301 https://$host$request_uri;
+        }
+
+        # Disable caching
+        proxy_no_cache      1;
+        proxy_cache_bypass  1;
+
+        # Pass to Apache (or upstream app server)
+        proxy_pass                          http://0.0.0.0:8000;
+        proxy_set_header  Host              $host;
+        proxy_set_header  X-Real-IP         $remote_addr;
+        proxy_set_header  X-Forwarded-For   $proxy_add_x_forwarded_for;
+        proxy_set_header  X-Forwarded-Proto $scheme;
+    }
+
+
+    location /static/ {
+        alias /home/goby/from_git/v1/goby/staticfiles/;
+        expires 30d;
+        access_log off;
+        add_header Cache-Control "public";
+        try_files $uri =404;
+    }
+
+    # Media files configuration
+    location /media/ {
+        alias /home/goby/from_git/v1/goby/media/;
+        expires 30d;
+        access_log off;
+        add_header Cache-Control "public";
+        try_files $uri =404;
+    }
+
+    # WebSocket configuration
+    location /ws/ {
+        proxy_pass http://0.0.0.0:8000;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_read_timeout 86400;
+    }
+
+}

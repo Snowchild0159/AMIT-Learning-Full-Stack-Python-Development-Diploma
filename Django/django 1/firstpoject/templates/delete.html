@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block content %}
+  
+<div class="alert alert-danger">
+    
+    are you sure you want to delete department {{department.name }} ? 
+</div>
+<form method="post">
+    <div class="text-center">
+        
+        <a href="{% url 'home' %}">
+            <button  class="btn btn-secondary" type="button">Back</button>
+        </a>
+        <button class="btn btn-primary" type="submit">Delete</button>
+    </div>
+</form>
+
+{% endblock content %}

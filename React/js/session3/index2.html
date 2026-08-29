@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js - Session 3</title>
+
+    <style>
+        .circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 1px solid black;
+            
+        }
+        
+        .square {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+
+            animation: popup 2s linear infinite;
+        }
+
+        @keyframes popup {
+            0%{
+                transform: scale(0.2);
+            }
+            50%{
+                
+                transform: scale(1);
+            }
+            100%{
+                
+                transform: scale(0.2);
+            }
+            
+
+        }
+    </style>
+</head>
+<body>
+    <!-- <h1>Hello World</h1>
+    <ul id="my-list">
+        
+    </ul>
+
+    <div class="container">
+        <h2 >Hello div</h2>
+        
+    </div> -->
+
+    <div class="item1"></div>
+    <div class="item2"></div>
+    <div class="item3"></div>
+ 
+    <script>
+        const item1 = document.querySelector(".item1")
+        // const choice = prompt("Please, enter your choice : ")
+        // if (choice == 1) {
+
+        //     item1.className = "square"
+        // }else{
+            
+        //     item1.className = "circle"
+        // }
+
+        while (true) {
+            for(let i = 0;  i < 1000000000 ; i ++) {
+            }
+            item1.classList.toggle("circle")
+
+        }   
+        console.log("hello")
+        // const eles = document.getElementsByClassName("container")
+        // const eles = document.getElementsByTagName("div")
+        // console.log(eles.length)
+
+        // const cont = document.querySelector(".container h2")
+        // const redChennel = prompt('Please, enter the red channer') 
+        // const blueChennel = prompt('Please, enter the blue channer') 
+        // const greenChennel = prompt('Please, enter the green channer') 
+        // cont.style.color = 'red'
+        // // cont.style.backgroundColor = 'brown'
+        // // cont.style.backgroundColor = '#eeeeee'
+        // cont.style.backgroundColor = `rgb(${redChennel} ,${blueChennel} ,${greenChennel})`
+        // // console.log(cont)
+        // DOM  : Docuemtn object model 
+        // const myElement = document.getElementById("my-list")
+        // console.log(myElement.innerText )
+        // // myElement.innerText = "<li>hello world</li>"
+        // myElement.innerHTML = "<li>hello world</li>"
+        // // myElement.textContent = "hello world"
+        // console.log(myElement)
+
+
+        // function capitalize(name) {
+        //     const capitalizeName = name[0].toUpperCase() + name.slice(1).toLowerCase()
+        //     return capitalizeName
+        // }
+
+        // const firstHobby = prompt("Please, enter the first hobby : ")
+        // const secondHobby = prompt("Please, enter the second hobby : ")
+        // const thirdHobby = prompt("Please, enter the third hobby : ")
+
+        // const ul = document.getElementById("my-list")
+
+        // ul.innerHTML = `<li> ${capitalize(firstHobby)} </li>`
+        // ul.innerHTML += `<li> ${capitalize(secondHobby)} </li>`
+        // ul.innerHTML += `<li> ${capitalize(thirdHobby)} </li>`
+
+
+    </script>
+</body>
+</html>

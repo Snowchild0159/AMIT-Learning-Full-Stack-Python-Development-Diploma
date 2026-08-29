@@ -1,0 +1,12 @@
+.container{
+   background-color: brown;
+   width: 70%;
+   margin: 3px auto;
+   border-radius: 3px;
+   padding: 2px;
+
+}
+
+.snow{
+    color: aliceblue;
+}

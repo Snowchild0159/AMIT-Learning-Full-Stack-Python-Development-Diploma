@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            min-width: unset;
+            /* min-width: 1200px; */
+        }
+        .container{
+            height: 70px;
+            display: flex;
+            align-items: center;
+            box-shadow: 1px 1px 50px #00000039;
+            gap: 10px;
+            padding: 0px 15px;
+            font-family: sans-serif;
+        }
+        a{
+            text-decoration: none;
+            white-space: nowrap;
+            transition: all 0.3s;
+            padding: 10px;
+        }
+        a:hover{
+            background-color: aqua;
+            border-radius: 2px;
+        }
+        .udemy-logo img{
+            width: 100px;
+        }
+        form {
+            display: flex;
+            border: 2px solid #8d8d8d;
+            /* padding: 5px; */
+            border-radius: 30px;
+            flex-grow: 1;
+        
+        }
+        form button {
+            border: none;
+            background-color: transparent;
+            margin-right: 10px;
+        }
+        form input {
+            border: none;
+            outline: none;
+            flex-grow: 1;
+            background-color: transparent;
+        }
+
+        button{
+            background-color: transparent;
+            padding: 10px;
+            border: 1px solid blueviolet;
+            color: blueviolet;
+
+        }
+        .login-btn button{
+            font-weight: bolder;
+        }
+        .signup-btn button{
+            font-weight: bolder;
+            color: white;
+            background-color: blueviolet;
+        }
+        .btn-eatrh button{
+            padding: 8px;
+        }
+        .burger{
+            display: none;
+        }
+        @media (max-width : 1200px) {
+               .tech-on-udemy{
+                display: none;
+               }
+            
+        }
+        @media (max-width : 980px) {
+            .udemy-bessniss{
+                display: none;
+            }
+        }
+
+        @media (max-width: 800px) {
+            .explore{
+                display: none;
+            }
+            form{
+                display: none;
+            }
+            .prices{
+                display: none;
+                
+            }
+
+            .login-btn {
+                display: none;
+            }
+            .signup-btn{
+                display: none;
+
+            }
+            .burger{
+                display: block;
+
+            }
+            .udemy-logo{
+                flex-grow: 1;
+                display: flex;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="container">
+
+        <div class="burger">
+            <a href="">
+                🍔
+            </a>
+        </div>
+        <div class="udemy-logo">
+            <img src="https://frontends.udemycdn.com/frontends-homepage/staticx/udemy/images/v7/logo-udemy.svg" alt="udemy logo">
+        </div>
+
+        <div class="nav-link explore">
+            <a href="">Explore</a>
+        </div>
+
+        <form action="">
+
+            <button>🔍</button>
+            <input type="text" placeholder="Search rot anything">
+        </form>
+        <div class="nav-link prices">
+            <a href="">Plans & Pricing</a>
+        </div>
+        <div class="nav-link udemy-bessniss">
+            <a href="">Udemy Business</a>
+        </div>
+        <div class="nav-link tech-on-udemy"> 
+            <a href="">Teach On Udemy</a>
+        </div>
+
+        <div>
+            🛒
+        </div>
+        <div class="btn login-btn">
+            <button>Log in</button>
+        </div>
+        <div class="btn signup-btn">
+            <button>Sign Up</button>
+        </div>
+        <div class="btn btn-earth">
+            <button>
+                🌐
+            </button>
+        </div>
+    </header>
+    <main>
+
+    </main>
+    
+</body>
+</html>

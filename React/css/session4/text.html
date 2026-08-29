@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        .container{
+            height: 500px;
+            background-color: oklch(81.19% .1424 76.67deg);
+            display: flex;
+            justify-content: center;
+            align-items: center;    
+        }
+        .content{
+            width: 80%;
+            height: 80%;
+            background-color: aliceblue;
+            border-radius: 30px;
+            padding: 20px;
+            display: flex;
+        }
+        .content-image{
+            flex-basis: 40%;
+            background-color:  oklch(81.19% .1424 76.67deg) ;
+            border-radius: 30px;
+        }
+        .content-image img{
+            height: 100%;
+        }
+        .content-text{
+            display: flex;
+            flex-direction: column;
+        }
+        .ratings{
+            display: flex;
+            justify-content: start;
+            gap: 60px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="content">
+            <div class="content-text">
+
+                <div class="item">
+                    <h1>Full Stack Web Developer
+Career Accelerator</h1>
+                </div>
+                <div class="item">
+                    <p>Your career in full stack web development starts here. Fast-track learning and interview prep. Grow skills at your own pace. Expand your earnings potential.</p>
+                </div>
+                <div class="item ratings ">
+                    <div class="rating">
+                        <div class="rating-number">
+                            4.7
+                        </div>
+                        <div class="rating-text">
+                            average course rating
+
+                        </div>
+                    </div>
+                    <div class="rating">
+                         <div class="rating-number">
+                           ⭐ 4.7
+                        </div>
+                        <div class="rating-text">
+                            average course rating
+
+                        </div>
+                    </div>
+                    <div class="rating">
+                         <div class="rating-number">
+                            4.7
+                        </div>
+                        <div class="rating-text">
+                            average course rating
+
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="inneritem">
+                        <button>Get Started</button>
+                    </div>
+                    <div class="inneritem">E£1,129.97
+</div>
+                </div>
+                <div class="item">
+                    1.5M learners already enrolled
+                </div>
+            </div>
+            <div class="content-image">
+                <img src="https://s.udemycdn.com/career-academies/careers/full-stack-web-developer/frontend-webdev-human.png" alt="">
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <script>
+    let fruits = ["Apple", "Banana", "Mango", "Orange", "Pineapple"] 
+    console.log("First",fruits[0])
+    console.log("Last",fruits[fruits.length -1])
+    fruits.push("Grapes")
+    fruits.splice(1,1)
+    console.log (fruits)
+
+    let numbers = [3, 5, 8, 4, 21, 22, 4, 13]
+    function sum(arr){
+        let sum = 0
+        for(let i = 0; i< arr.length; i++){
+
+            sum+=arr[i]
+        }
+        return sum
+    }
+    console.log("Sum =", sum(numbers))
+
+    function findMax(arr) {
+    let max = arr[0];
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] > max) {
+            max = arr[i];
+        }
+    }
+    return max;
+}
+console.log("Max =", findMax(numbers));
+
+
+function findMin(arr) {
+    let min = arr[0];
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] < min) {
+            min = arr[i];
+        }
+    }
+    return min;
+}
+console.log("Min =", findMin(numbers));
+
+function printEvenNumbers(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 === 0) {
+            console.log(arr[i]);
+        }
+    }
+}
+
+printEvenNumbers(numbers);
+
+
+let student = {
+    name: "Ali",
+    age: 22,
+    grade: "8th",
+    subjects: ["Math", "English", "Science"],
+
+    displayInfo: function () {
+        console.log("Name:", this.name);
+        console.log("Age:", this.age);
+        console.log("Grade:", this.grade);
+        console.log("Subjects:", this.subjects);
+    }
+};
+
+student.displayInfo();
+
+
+let books = [
+  { title: "Book One", author: "Author A", year: 2015 },
+  { title: "Book Two", author: "Author B", year: 2008 },
+  { title: "Book Three", author: "Author C", year: 2020 }
+];
+
+console.log("All book titles:");
+for (let i = 0; i < books.length; i++) {
+  console.log(books[i].title);
+}
+
+let oldestBook = books[0]; 
+for (let i = 1; i < books.length; i++) {
+  if (books[i].year < oldestBook.year) {
+    oldestBook = books[i];
+  }
+}
+
+console.log("Oldest book:");
+console.log("Title:", oldestBook.title);
+console.log("Author:", oldestBook.author);
+console.log("Year:", oldestBook.year);
+
+      class Car {
+  constructor(brand, model, year) {
+    this.brand = brand;
+    this.model = model;
+    this.year = year;
+  }
+
+  displayDetails() {
+    console.log("Brand:", this.brand);
+    console.log("Model:", this.model);
+    console.log("Year:", this.year);
+    console.log("----------");
+  }
+}
+
+
+let car1 = new Car("Toyota", "Corolla", 2020);
+let car2 = new Car("Honda", "Civic", 2018);
+
+car1.displayDetails();
+car2.displayDetails();
+
+class BankAccount {
+  constructor(ownerName, balance) {
+    this.ownerName = ownerName;
+    this.balance = balance;
+  }
+
+  
+  deposit(amount) {
+    this.balance = this.balance + amount;
+    console.log(amount, "deposited.");
+  }
+
+  withdraw(amount) {
+    if (amount <= this.balance) {
+      this.balance = this.balance - amount;
+      console.log(amount, "withdrawn.");
+    } else {
+      console.log("Insufficient funds! Cannot withdraw", amount);
+    }
+  }
+
+  checkBalance() {
+    console.log("Current balance for", this.ownerName, "=", this.balance);
+  }
+}
+
+let account = new BankAccount("Ali", 1000);
+
+account.checkBalance();   
+account.deposit(500);     
+account.checkBalance();   
+account.withdraw(300);    
+account.checkBalance();   
+account.withdraw(2000);   
+account.checkBalance();   
+
+
+class Library {
+  constructor() {
+    this.books = [];
+  }
+
+  addBook(title, author) {
+    let newBook = { title: title, author: author };
+    this.books.push(newBook);
+    console.log("Book added:", title);
+  }
+
+  removeBook(title) {
+    let index = -1;
+    for (let i = 0; i < this.books.length; i++) {
+      if (this.books[i].title === title) {
+        index = i;
+        break;
+      }
+    }
+
+    if (index !== -1) {
+      this.books.splice(index, 1);
+      console.log("Book removed:", title);
+    } else {
+      console.log("Book not found:", title);
+    }
+  }
+
+  listBooks() {
+    if (this.books.length === 0) {
+      console.log("No books in the library.");
+      return;
+    }
+
+    console.log("Books in the library:");
+    for (let i = 0; i < this.books.length; i++) {
+      console.log("- Title:", this.books[i].title, "| Author:", this.books[i].author);
+    }
+  }
+}
+
+let myLibrary = new Library();
+
+myLibrary.addBook("Book One", "Author A");
+myLibrary.addBook("Book Two", "Author B");
+myLibrary.listBooks();
+myLibrary.removeBook("Book One");
+myLibrary.listBooks();
+
+
+  </script>  
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" class="inp" >
+    <ul></ul>
+
+
+    <script>
+        const input = document.querySelector(".inp")
+        const ul = document.querySelector("ul")
+        const names = localStorage.getItem("names") // 	["hossam","ali"]
+        const namesObjs = JSON.parse(names) 
+        for(let i = 0;  i < namesObjs.length ; i++) {
+            ul.innerHTML += `<li> ${namesObjs[i]}</li> `
+        }
+        input.addEventListener("keyup" , function(e) {
+
+            if(e.key == 'Enter') {
+                ul.innerHTML += `<li> ${input.value}</li> `
+
+                namesObjs.push(input.value)
+
+                const storedvalue = JSON.stringify(namesObjs) 
+
+                localStorage.setItem("names" ,storedvalue )
+
+                input.value = ''
+            }
+        })
+
+
+                // localStorage.removeItem("age")
+        // localStorage.clear()
+        // localStorage.setItem("age" , 13)
+        // console.log(localStorage.getItem("name"))
+        // const names = ["ahmed" , "omar" , "ali"] 
+        // const names = '["ahmed","omar","ali"]'
+        // console.log(JSON.parse(names))
+        // console.log(JSON.stringify(names))
+
+        // localStorage.setItem("names" , ["ahmed" , "omar" , "hassan"])
+
+
+        // const name = localStorage.getItem("name") 
+
+        
+        // ul.innerHTML = `<li>${name} </li>`
+    </script>
+
+</body>
+</html>

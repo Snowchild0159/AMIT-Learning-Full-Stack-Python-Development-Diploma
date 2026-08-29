@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        /* background-color: red; */
+        background-image: linear-gradient(#0f0c29, #302b63, #24243e);
+        background-repeat: no-repeat;
+        height: 100vh;
+
+        padding: 10px;
+        position: relative;
+      }
+      main { 
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: 0px 0px 50px black;
+        border-radius: 30px;
+        height: 650px;
+        overflow: hidden;
+
+        /* border: 1psx solid black; */
+      }
+      .login-section{
+      }
+      .signup-form{
+        height: 500px;
+        padding: 10px;
+        text-align: center;
+        color: white;
+
+
+      }
+        h1{
+            margin-top: 70px;
+        }
+      input{
+        width: 80%;
+        margin: 20px 0px;
+        padding: 15px;
+        border-radius: 12px;
+      }
+
+      input:focus {
+        outline: 1px solid green;
+      }
+      .signup-button{
+        padding: 10px 20px;
+        margin: 30px auto;
+        border-radius: 10px;
+        background-color: white;
+        border: none;
+        display: block;
+
+
+      }
+      .login-form{
+        text-align: center;
+        background-color: white;
+        height: 500px;
+        border-radius: 10%;
+        padding-top: 10px;
+        transition: all 1s;
+      }
+      .login-form h1 {
+            margin-top: 40px;
+      }
+      .login-form:hover {
+        transform: translateY(-380px);
+      }
+      .login-button{
+        padding: 10px 20px;
+        border: none;
+        border-radius: 15px;
+        background-color: #302b63;
+        color: white;
+        display: block;
+        margin: 30px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="login-section">
+        <form class="signup-form" action="">
+          <h1>Sign Up</h1>
+          <input placeholder="enter username: " type="username" />
+          <input placeholder="enter email" type="email" />
+          <input placeholder="enter password" type="password" />
+
+          <button class="signup-button"> Sign Up</button>
+        </form>
+      </section>
+      <section class="signup-section">
+        <form class="login-form" action="">
+          <h1>Login Up</h1>
+          <input placeholder="enter username" type="username" />
+          <input placeholder="enter password" type="password" />
+
+          <button class="login-button">login Up</button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

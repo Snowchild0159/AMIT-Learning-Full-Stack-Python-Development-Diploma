@@ -1,0 +1,156 @@
+
+html{
+    /* font-size: 50px; */
+}
+p{
+    text-transform: lowercase;
+    text-transform: uppercase;
+    text-transform:capitalize;
+
+    text-decoration: underline;
+    text-decoration: overline;
+    text-decoration: line-through;
+    text-decoration: none;
+
+    text-indent: 20px;
+
+
+    line-height: 16px;
+
+    word-spacing: 10px;
+    letter-spacing: 3px;
+
+
+    word-break: keep-all;
+    /* word-break: break-all; */
+    /* word-break: nowrap; */
+
+   /* word-wrap: nowrap; */
+
+   /* white-space: nowrap; */
+
+   overflow: auto;
+
+   color: aqua;
+   background-color: black;
+
+   /* text-shadow: 5px 5px 3px rgb(0, 0, 0) ; */
+    font-size: 20px;
+
+    padding: 40px;
+    padding: 2rem;
+
+    font-weight:lighter;
+
+    font-style: italic;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h1{
+    font-weight: lighter;
+}
+
+
+/* .mydiv{
+    height: 200px;
+    width: 200px;
+    border-top :10px solid #333333;
+    border-right :10px solid #333333;
+    border-radius: 50%;
+    animation: loading;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear ;
+} */
+/* 
+@keyframes loading {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        
+        transform: rotate(760deg);
+    }
+} */
+
+
+/* .mydiv{
+    width: 330px;
+    height: 330px;
+    background-color: aqua;
+
+    border-top: 10px solid black;
+    animation: spin ;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+
+}
+@keyframes spin {
+    0%{
+        border-top: 10px solid red;
+        border-left: none;
+        border-right: none;
+        border-bottom: none;
+
+    
+    }
+    25%{
+        border-top: none ;
+        border-right: 10px solid green;
+        border-left: none;
+        border-bottom: none;
+    }
+    75%{
+        border-bottom: 10px solid blue;
+        border-right: none;
+           border-left: none;
+        border-right: none;
+        
+    }
+    100%{
+        border-left: 10px solid yellow;
+        border-bottom: none;
+        border-right: none;
+        border-top: none;
+    
+        
+    }
+} */
+/* .child{
+    width: 100px;
+    height: 30px;
+    background-color: white ;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    box-shadow: 10px 0px 10px white;
+
+    animation: loading;
+    animation-duration: 2s;
+    animation-iteration-count: 10;
+    
+} */
+.mydiv{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    background-color: brown;
+
+    animation: downtop infinite;
+    animation-duration: 2s;
+
+}
+
+@keyframes downtop {
+    0%{
+        transform: translate(0px , 0px);
+    }
+    75%{
+        transform: translate(0px , 500px);
+    }
+    100%{
+        transform: translate(0px , 0px);
+
+    }
+
+}

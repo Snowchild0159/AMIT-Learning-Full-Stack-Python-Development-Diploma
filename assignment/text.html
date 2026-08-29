@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Udemy-like header + hero (closer)</title>
+<style>
+  :root{
+    /* Udemy UI tokens (approx) */
+    --text:#1c1d1f; --muted:#6a6f73; --stroke:#d1d7dc;
+    --chip:#f7f9fa; --bg:#fff;
+    --violet:#5624d0; --violet2:#a435f0;
+    --maxw:1340px;
+  }
+  *{box-sizing:border-box} html,body{margin:0}
+  body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial;background:#fff;color:var(--text)}
+  /* ================= NAV ================= */
+  .nav{position:sticky;top:0;z-index:100; background:#fff; border-bottom:1px solid var(--stroke)}
+  .nav__row{max-width:var(--maxw); margin:0 auto; padding:0 24px; height:64px;
+    display:flex; align-items:center; gap:12px}
+  .nav__logo img{height:28px; display:block}
+  .nav__link{font-size:14px; color:var(--text); text-decoration:none; padding:8px 10px; border-radius:6px; white-space:nowrap}
+  .nav__link:hover{background:#f2f2f2}
+  .nav__search{flex:1; display:flex; align-items:center; gap:10px;
+    height:44px; padding:0 14px; border:1px solid var(--stroke); border-radius:999px; background:var(--chip)}
+  .nav__search svg{width:18px; height:18px; flex:0 0 auto}
+  .nav__search input{flex:1; border:0; outline:0; background:transparent; font-size:14px; color:var(--text)}
+  .nav__search input::placeholder{color:var(--muted)}
+  .icon-btn{display:grid; place-items:center; width:40px; height:40px; border:1px solid var(--stroke); border-radius:6px; background:#fff; cursor:pointer}
+  .btn{height:40px; padding:0 14px; font-weight:700; font-size:14px; border-radius:6px; border:1px solid #1c1d1f; background:#fff; cursor:pointer}
+  .btn--filled{background:#1c1d1f; color:#fff}
+  .nav__burger{display:none; font-size:22px; padding:6px 8px}
+  @media (max-width:1200px){ .nav__teach{display:none} }
+  @media (max-width:980px){ .nav__biz{display:none} }
+  @media (max-width:800px){
+    .nav__explore,.nav__pricing,.nav__auth,.nav__search{display:none}
+    .nav__burger{display:block}
+    .nav__row{gap:8px; padding:0 12px}
+    .nav__logo{flex:1; display:flex; justify-content:center}
+  }
+
+  /* ================= HERO ================= */
+  .hero{background:
+    radial-gradient(120% 100% at 85% 5%, #7c3aed 0%, #6b2dd3 35%, #5624d0 65%, #4c1bb3 100%);
+    color:#fff}
+  .hero__wrap{max-width:var(--maxw); margin:0 auto; padding:40px 24px 56px;
+    display:grid; grid-template-columns:1.05fr 0.95fr; gap:24px; min-height:360px}
+  .eyebrow{font-weight:700; letter-spacing:.2px; margin-bottom:6px}
+  .hero h1{font-size:40px; line-height:1.15; margin:8px 0 12px}
+  .hero p{color:#e7e8f1; font-size:16px; margin:0 0 18px; max-width:56ch}
+  .cta-row{display:flex; gap:12px}
+  .cta{height:44px; padding:0 16px; border-radius:6px; font-weight:700; cursor:pointer; border:1px solid #fff}
+  .cta--primary{background:#fff; color:#2d2f31; border-color:#fff}
+  .cta--ghost{background:transparent; color:#fff}
+  .art{position:relative; min-height:280px; display:flex; align-items:end; justify-content:center}
+  .art__img{width:86%; max-width:520px; border-radius:16px; box-shadow:0 20px 60px rgba(0,0,0,.25)}
+  .chip{position:absolute; display:flex; align-items:center; gap:8px; background:#fff; color:#2d2f31;
+    border-radius:16px; padding:10px 12px; font-size:13px; box-shadow:0 10px 30px rgba(0,0,0,.25)}
+  .chip--1{top:10%; left:8%} .chip--2{top:18%; right:10%} .chip--3{bottom:10%; right:12%}
+  @media (max-width:900px){ .hero__wrap{grid-template-columns:1fr} }
+</style>
+</head>
+<body>
+
+<!-- ===== NAVBAR (closer) ===== -->
+<nav class="nav" aria-label="Primary">
+  <div class="nav__row">
+    <a class="nav__burger" href="#" aria-label="Open menu">☰</a>
+
+    <a class="nav__logo" href="#">
+      <img src="https://frontends.udemycdn.com/frontends-homepage/staticx/udemy/images/v7/logo-udemy.svg" alt="Udemy"/>
+    </a>
+
+    <a class="nav__link nav__explore" href="#">Explore</a>
+
+    <form class="nav__search" role="search" aria-label="Search">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 21l-4.3-4.3m1.3-5A7 7 0 1 1 4 6a7 7 0 0 1 14 0z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <input type="search" placeholder="Search for anything"/>
+    </form>
+
+    <a class="nav__link nav__pricing" href="#">Plans & Pricing</a>
+    <a class="nav__link nav__biz" href="#">Udemy Business</a>
+    <a class="nav__link nav__teach" href="#">Teach on Udemy</a>
+
+    <button class="icon-btn" aria-label="Cart">🛒</button>
+
+    <div class="nav__auth" style="display:flex; gap:8px">
+      <button class="btn">Log in</button>
+      <button class="btn btn--filled">Sign up</button>
+    </div>
+
+    <button class="icon-btn" aria-label="Language">🌐</button>
+  </div>
+</nav>
+
+<!-- ===== HERO (closer) ===== -->
+<section class="hero">
+  <div class="hero__wrap">
+    <div>
+      <div class="eyebrow">Master tomorrow's skills today</div>
+      <h1>Power up your AI, career, and life skills</h1>
+      <p>Up-to-date, expert-led learning to grow in AI, data, IT, and more — at your own pace.</p>
+      <div class="cta-row">
+        <button class="cta cta--primary">Get started</button>
+        <button class="cta cta--ghost">Learn AI</button>
+      </div>
+    </div>
+
+    <div class="art">
+      <!-- Replace with your own asset to match exactly -->
+      <img class="art__img"
+        src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?q=80&w=1200&auto=format&fit=crop"
+        alt="Learner"/>
+      <div class="chip chip--1">🧠 AI</div>
+      <div class="chip chip--2">📈 Data</div>
+      <div class="chip chip--3">✨ Skills</div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
